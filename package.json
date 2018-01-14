@@ -4,8 +4,7 @@
   "description": "SSH2 server in Node.js",
   "main": "lib/index.js",
   "scripts": {
-    "test":
-      "(apm test) && (flow check) && (eslint . ) && (prettier -l '{src,spec}/**/*.js')",
+    "test": "(apm test) && (flow check) && (eslint . ) && (prettier -l '{src,spec}/**/*.js')",
     "build": "sb-babel-cli -o lib src",
     "watch": "npm run build -- -w"
   },
@@ -13,7 +12,12 @@
     "type": "git",
     "url": "https://github.com/steelbrain/ssh2-server"
   },
-  "keywords": ["ssh", "ssh2", "sftp", "server"],
+  "keywords": [
+    "ssh",
+    "ssh2",
+    "sftp",
+    "server"
+  ],
   "author": "steelbrain <i@steelbrain.me>",
   "license": "MIT",
   "bugs": {
