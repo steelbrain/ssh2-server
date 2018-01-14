@@ -82,9 +82,8 @@ export type Config = {|
   shouldAllowExec?: (user: User) => Promise<boolean>,
   shouldAllowWrite?: (user: User, filePath: string) => Promise<boolean>,
   shouldAllowEscapingRoot?: (user: User) => Promise<boolean>,
-  getUserShell?: (user: User) => Promise<string>,
 
-  getUserSystemUser?: (user: User) => Promise<{ uid: number, gid: number }>,
+  getUserShell?: (user: User) => Promise<string>,
   getUserRootDirectory: (user: User) => Promise<string>,
 |}
 

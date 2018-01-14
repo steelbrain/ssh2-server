@@ -16,7 +16,6 @@ const configTypes = [
   ['handleError', ['function']],
   ['userShell', ['undefined', 'string']],
   ['getUserShell', ['undefined', 'function']],
-  ['getUserSystemUser', ['undefined', 'function']],
   ['getUserRootDirectory', ['function']],
 ]
 

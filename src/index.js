@@ -56,6 +56,8 @@ async function main() {
     handleError(error) {
       console.error('Error encountered', error)
     },
+
+    allowSFTP: true,
   })
   await server.listen({
     port: 8099,

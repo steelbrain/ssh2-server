@@ -6,25 +6,23 @@
   "scripts": {
     "test": "(apm test) && (flow check) && (eslint . ) && (prettier -l '{src,spec}/**/*.js')",
     "build": "sb-babel-cli -o lib src",
-    "watch": "npm run build -- -w"
+    "watch": "npm run build -- -w",
+    "dev": "nodemon --inspect --watch src lib"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/steelbrain/ssh2-server"
   },
-  "keywords": [
-    "ssh",
-    "ssh2",
-    "sftp",
-    "server"
-  ],
+  "keywords": ["ssh", "ssh2", "sftp", "server"],
   "author": "steelbrain <i@steelbrain.me>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/steelbrain/ssh2-server/issues"
   },
   "dependencies": {
-    "ssh2": "^0.5.5"
+    "node-ssh": "^5.0.0",
+    "ssh2": "^0.5.5",
+    "ssh2-streams": "^0.1.20"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -33,6 +31,7 @@
     "eslint-config-steelbrain": "^4.0.1",
     "flow-bin": "^0.63.1",
     "jasmine-fix": "^1.3.1",
+    "nodemon": "^1.14.11",
     "prettier": "^1.10.2",
     "sb-babel-cli": "0.0.5"
   }
