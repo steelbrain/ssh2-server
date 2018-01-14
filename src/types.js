@@ -23,18 +23,24 @@ export type AuthContext =
       method: 'none',
       accept: AuthContextAccept,
       reject: AuthContextReject,
+      user?: string,
+      username?: string,
     |}
   | {|
       method: 'password',
       accept: AuthContextAccept,
       reject: AuthContextReject,
       password: string,
+      user?: string,
+      username?: string,
     |}
   | {|
       method: 'publickey',
       accept: AuthContextAccept,
       reject: AuthContextReject,
       key: AuthContextKey,
+      user?: string,
+      username?: string,
     |}
   | {|
       method: 'keyboard-interactive',

@@ -21,12 +21,6 @@ export default class SSHClient {
     const authAccept: Function = authContext.accept
     const authReject: Function = authContext.reject
 
-    if (authContext.method === 'none') {
-      // TODO: Why is this necessary?
-      authReject.call(authContext)
-      return
-    }
-
     // eslint-disable-next-line no-param-reassign
     authContext.accept = (user: User) => {
       invariant(['number', 'string'].includes(typeof user), 'accept() expects parameter 1 to be a string or number')
