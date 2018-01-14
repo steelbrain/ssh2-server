@@ -20,6 +20,11 @@ export type AuthContextReject =
   | ((authMethodsLeft: Array<string>, isPartialSuccess: boolean) => void)
 export type AuthContext =
   | {|
+      method: 'none',
+      accept: AuthContextAccept,
+      reject: AuthContextReject,
+    |}
+  | {|
       method: 'password',
       accept: AuthContextAccept,
       reject: AuthContextReject,
@@ -57,6 +62,7 @@ export type Config = {|
     // .. pass another options you want to pass to the ssh2 server
   },
   authenticate(authContext: AuthContext): Promise<void>,
+  handleError(error: Error): void,
 
   allowSFTP?: boolean, // default is false
   allowShell?: boolean, // default is false
@@ -74,4 +80,12 @@ export type Config = {|
 
   getUserSystemUser?: (user: User) => Promise<{ uid: number, gid: number }>,
   getUserRootDirectory: (user: User) => Promise<string>,
+|}
+
+export type ListenOptions = {|
+  port?: number,
+  host?: string,
+  path?: string,
+  backlog?: number,
+  exclusive?: boolean,
 |}

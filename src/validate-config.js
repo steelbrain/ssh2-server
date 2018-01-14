@@ -11,8 +11,9 @@ const configTogglesAndCallbackPairs = [
   ['allowEscapingRoot', 'shouldAllowEscapingRoot'],
 ]
 const configTypes = [
-  ['server', ['undefined', 'object']],
+  ['server', ['object']],
   ['authenticate', ['function']],
+  ['handleError', ['function']],
   ['userShell', ['undefined', 'string']],
   ['getUserShell', ['undefined', 'function']],
   ['getUserSystemUser', ['undefined', 'function']],
